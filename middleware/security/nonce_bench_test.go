@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kamalyes/go-config/pkg/signature"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
+	"github.com/HitGameAI/apex-cos/pkg/signature"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
 )
 
 // benchmarkDeriveNonceConfig 派生路径基准配置（对齐生产签名配置）

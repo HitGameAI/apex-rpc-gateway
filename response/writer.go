@@ -17,10 +17,10 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	commonapis "github.com/kamalyes/go-rpc-gateway/proto"
-	"github.com/kamalyes/go-toolbox/pkg/httpx"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	commonapis "github.com/HitGameAI/apex-rpc-gateway/proto"
+	"github.com/HitGameAI/apex-toolbox/pkg/httpx"
 )
 
 // jsonEncoderPool JSON 编码器对象池

@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kamalyes/go-config/pkg/database"
+	"github.com/HitGameAI/apex-cos/pkg/database"
 	"github.com/stretchr/testify/assert"
 )
 

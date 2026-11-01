@@ -13,9 +13,9 @@ package mqtt
 import (
 	"context"
 	pahoMqtt "github.com/eclipse/paho.mqtt.golang"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	gologger "github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-rpc-gateway/global"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	gologger "github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
 	"time"
 )
 

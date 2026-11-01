@@ -17,7 +17,7 @@ import (
 	"testing"
 	"time"
 
-	gopprof "github.com/kamalyes/go-config/pkg/pprof"
+	gopprof "github.com/HitGameAI/apex-cos/pkg/pprof"
 	"github.com/stretchr/testify/assert"
 )
 

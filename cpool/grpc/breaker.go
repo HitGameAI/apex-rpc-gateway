@@ -18,9 +18,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	breakerconfig "github.com/kamalyes/go-config/pkg/breaker"
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-rpc-gateway/middleware"
+	breakerconfig "github.com/HitGameAI/apex-cos/pkg/breaker"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/status"
 )

@@ -16,8 +16,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/kamalyes/go-config/pkg/cors"
-	"github.com/kamalyes/go-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-cos/pkg/cors"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
 	"github.com/stretchr/testify/assert"
 )
 

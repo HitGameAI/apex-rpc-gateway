@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	breakerconfig "github.com/kamalyes/go-config/pkg/breaker"
-	"github.com/kamalyes/go-rpc-gateway/errors"
+	breakerconfig "github.com/HitGameAI/apex-cos/pkg/breaker"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

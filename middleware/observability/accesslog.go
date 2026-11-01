@@ -19,12 +19,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
-	sqltypes "github.com/kamalyes/go-sqlbuilder/types"
-	"github.com/kamalyes/go-toolbox/pkg/mathx"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	sqltypes "github.com/HitGameAI/apex-toolbox/pkg/sqlbuilder/types"
+	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 	"gorm.io/gorm"
 )
 

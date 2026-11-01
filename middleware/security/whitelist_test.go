@@ -16,7 +16,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 	"github.com/stretchr/testify/assert"
 )
 

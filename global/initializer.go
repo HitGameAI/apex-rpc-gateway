@@ -19,11 +19,11 @@ import (
 	"time"
 
 	"github.com/bwmarrin/snowflake"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-rpc-gateway/cpool"
-	"github.com/kamalyes/go-toolbox/pkg/mathx"
-	"github.com/kamalyes/go-toolbox/pkg/osx"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-rpc-gateway/cpool"
+	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
+	"github.com/HitGameAI/apex-toolbox/pkg/osx"
 )
 
 // Initializer 初始化器接口 - 统一初始化流程

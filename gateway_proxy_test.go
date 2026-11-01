@@ -16,10 +16,10 @@ import (
 	"testing"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	grpcpool "github.com/kamalyes/go-rpc-gateway/cpool/grpc"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-rpc-gateway/server"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	grpcpool "github.com/HitGameAI/apex-rpc-gateway/cpool/grpc"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/server"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 )

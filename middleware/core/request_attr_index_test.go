@@ -18,8 +18,8 @@ import (
 	"reflect"
 	"testing"
 
-	gccommon "github.com/kamalyes/go-config/pkg/common"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
+	gccommon "github.com/HitGameAI/apex-cos/pkg/common"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

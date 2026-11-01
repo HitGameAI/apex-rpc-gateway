@@ -15,8 +15,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-toolbox/pkg/contextx"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-toolbox/pkg/contextx"
 	"github.com/stretchr/testify/assert"
 )
 

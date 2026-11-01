@@ -13,7 +13,7 @@ package resilience
 import (
 	"time"
 
-	shedderconfig "github.com/kamalyes/go-config/pkg/shedder"
+	shedderconfig "github.com/HitGameAI/apex-cos/pkg/shedder"
 )
 
 // ============================================================================

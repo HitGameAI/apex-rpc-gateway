@@ -16,7 +16,7 @@
 // 既有调用方式无需任何改动；类型使用别名，方法集与类型身份完全等同于子包中的定义
 //
 // 每个符号的文档注释与实现放在一起，位于对应子包中，
-// 例如 go doc github.com/kamalyes/go-rpc-gateway/middleware/observability Tracing
+// 例如 go doc github.com/HitGameAI/apex-rpc-gateway/middleware/observability Tracing
 //
 // [EN] Package middleware is the single entry point for the gateway middlewares.
 // The implementation is split by responsibility into the core, resilience, observability,
@@ -32,27 +32,27 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
-	"github.com/kamalyes/go-rpc-gateway/middleware/i18n"
-	"github.com/kamalyes/go-rpc-gateway/middleware/observability"
-	"github.com/kamalyes/go-rpc-gateway/middleware/resilience"
-	mwsecurity "github.com/kamalyes/go-rpc-gateway/middleware/security"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/i18n"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/observability"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/resilience"
+	mwsecurity "github.com/HitGameAI/apex-rpc-gateway/middleware/security"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	breakerconfig "github.com/kamalyes/go-config/pkg/breaker"
-	"github.com/kamalyes/go-config/pkg/cors"
-	gci18n "github.com/kamalyes/go-config/pkg/i18n"
-	"github.com/kamalyes/go-config/pkg/monitoring"
-	gopprof "github.com/kamalyes/go-config/pkg/pprof"
-	"github.com/kamalyes/go-config/pkg/ratelimit"
-	"github.com/kamalyes/go-config/pkg/recovery"
-	"github.com/kamalyes/go-config/pkg/security"
-	shedderconfig "github.com/kamalyes/go-config/pkg/shedder"
-	"github.com/kamalyes/go-config/pkg/signature"
-	"github.com/kamalyes/go-config/pkg/tracing"
-	goi18n "github.com/kamalyes/go-i18n"
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-toolbox/pkg/sign"
+	breakerconfig "github.com/HitGameAI/apex-cos/pkg/breaker"
+	"github.com/HitGameAI/apex-cos/pkg/cors"
+	gci18n "github.com/HitGameAI/apex-cos/pkg/i18n"
+	"github.com/HitGameAI/apex-cos/pkg/monitoring"
+	gopprof "github.com/HitGameAI/apex-cos/pkg/pprof"
+	"github.com/HitGameAI/apex-cos/pkg/ratelimit"
+	"github.com/HitGameAI/apex-cos/pkg/recovery"
+	"github.com/HitGameAI/apex-cos/pkg/security"
+	shedderconfig "github.com/HitGameAI/apex-cos/pkg/shedder"
+	"github.com/HitGameAI/apex-cos/pkg/signature"
+	"github.com/HitGameAI/apex-cos/pkg/tracing"
+	goi18n "github.com/HitGameAI/apex-toolbox/pkg/i18n"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-toolbox/pkg/sign"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/redis/go-redis/v9"
 	"go.opentelemetry.io/otel/attribute"

@@ -12,9 +12,9 @@
 package global
 
 import (
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-toolbox/pkg/osx"
-	"github.com/kamalyes/go-toolbox/pkg/types"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-toolbox/pkg/osx"
+	"github.com/HitGameAI/apex-toolbox/pkg/types"
 )
 
 // GetExtensionAs 获取指定类型的扩展配置（泛型版本）

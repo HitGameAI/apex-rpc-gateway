@@ -19,7 +19,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/kamalyes/go-rpc-gateway/middleware"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware"
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/balancer/base"
 	"google.golang.org/grpc/balancer/roundrobin"

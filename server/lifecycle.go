@@ -19,10 +19,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-rpc-gateway/middleware"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )
 
 // Start 启动服务器

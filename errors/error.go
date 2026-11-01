@@ -13,7 +13,7 @@ package errors
 
 import (
 	"fmt"
-	commonapis "github.com/kamalyes/go-rpc-gateway/proto"
+	commonapis "github.com/HitGameAI/apex-rpc-gateway/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"net/http"

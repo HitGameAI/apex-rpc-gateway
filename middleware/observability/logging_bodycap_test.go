@@ -19,9 +19,9 @@ import (
 	"strings"
 	"testing"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -17,7 +17,7 @@ import (
 	"io"
 	"testing"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	"github.com/klauspost/compress/zstd"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

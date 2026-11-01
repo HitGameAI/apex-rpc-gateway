@@ -14,9 +14,9 @@ package core
 import (
 	"net/http"
 
-	"github.com/kamalyes/go-config/pkg/ratelimit"
-	"github.com/kamalyes/go-config/pkg/signature"
-	gwerrors "github.com/kamalyes/go-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-cos/pkg/ratelimit"
+	"github.com/HitGameAI/apex-cos/pkg/signature"
+	gwerrors "github.com/HitGameAI/apex-rpc-gateway/errors"
 )
 
 // SignatureValidator 签名验证器接口

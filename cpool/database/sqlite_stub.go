@@ -21,8 +21,8 @@ package database
 import (
 	"context"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	gologger "github.com/kamalyes/go-logger"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	gologger "github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"gorm.io/gorm"
 )
 

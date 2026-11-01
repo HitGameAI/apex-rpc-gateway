@@ -13,7 +13,7 @@ package core
 import (
 	"testing"
 
-	"github.com/kamalyes/go-config/pkg/monitoring"
+	"github.com/HitGameAI/apex-cos/pkg/monitoring"
 
 	"github.com/stretchr/testify/assert"
 )

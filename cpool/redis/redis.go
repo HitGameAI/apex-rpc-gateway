@@ -13,8 +13,8 @@ package redis
 import (
 	"context"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-logger"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"github.com/redis/go-redis/v9"
 )
 

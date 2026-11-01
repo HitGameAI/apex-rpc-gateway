@@ -15,7 +15,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/kamalyes/go-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
 )
 
 // CPU 采样参数

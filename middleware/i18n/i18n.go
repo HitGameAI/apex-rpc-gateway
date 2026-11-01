@@ -18,12 +18,12 @@ import (
 	"net/url"
 	"strings"
 
-	gci18n "github.com/kamalyes/go-config/pkg/i18n"
-	goi18n "github.com/kamalyes/go-i18n"
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
-	"github.com/kamalyes/go-toolbox/pkg/mathx"
+	gci18n "github.com/HitGameAI/apex-cos/pkg/i18n"
+	goi18n "github.com/HitGameAI/apex-toolbox/pkg/i18n"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )

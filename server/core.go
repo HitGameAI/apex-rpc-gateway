@@ -12,8 +12,8 @@
 package server
 
 import (
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
 )
 
 // initCore 初始化核心组件，集成企业级组件

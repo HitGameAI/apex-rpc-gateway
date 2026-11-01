@@ -16,9 +16,9 @@ import (
 	"net/smtp"
 
 	"github.com/jordan-wright/email"
-	smtpconfig "github.com/kamalyes/go-config/pkg/smtp"
-	"github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	smtpconfig "github.com/HitGameAI/apex-cos/pkg/smtp"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )
 
 // MailHandler SMTP邮件处理接口

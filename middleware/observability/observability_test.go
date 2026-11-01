@@ -16,7 +16,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kamalyes/go-config/pkg/monitoring"
+	"github.com/HitGameAI/apex-cos/pkg/monitoring"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/testutil"
 )

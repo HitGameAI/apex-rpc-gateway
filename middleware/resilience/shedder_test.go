@@ -20,8 +20,8 @@ import (
 	"testing"
 	"time"
 
-	shedderconfig "github.com/kamalyes/go-config/pkg/shedder"
-	"github.com/kamalyes/go-rpc-gateway/errors"
+	shedderconfig "github.com/HitGameAI/apex-cos/pkg/shedder"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

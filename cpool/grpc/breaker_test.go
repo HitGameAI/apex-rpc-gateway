@@ -18,9 +18,9 @@ import (
 	"testing"
 	"time"
 
-	breakerconfig "github.com/kamalyes/go-config/pkg/breaker"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-rpc-gateway/middleware"
+	breakerconfig "github.com/HitGameAI/apex-cos/pkg/breaker"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"

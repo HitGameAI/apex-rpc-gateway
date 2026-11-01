@@ -11,9 +11,9 @@
 package global
 
 import (
-	"github.com/kamalyes/go-toolbox/pkg/idgen"
-	"github.com/kamalyes/go-toolbox/pkg/osx"
-	"github.com/kamalyes/go-toolbox/pkg/safe"
+	"github.com/HitGameAI/apex-toolbox/pkg/idgen"
+	"github.com/HitGameAI/apex-toolbox/pkg/osx"
+	"github.com/HitGameAI/apex-toolbox/pkg/safe"
 )
 
 // defaultSnowflakeShortIDLength 默认 Snowflake 短 ID 长度

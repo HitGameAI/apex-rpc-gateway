@@ -18,10 +18,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	shedderconfig "github.com/kamalyes/go-config/pkg/shedder"
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
+	shedderconfig "github.com/HitGameAI/apex-cos/pkg/shedder"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/status"
 )

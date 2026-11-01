@@ -19,16 +19,16 @@ import (
 	"strings"
 	"time"
 
-	validator "github.com/kamalyes/go-argus"
-	"github.com/kamalyes/go-config/pkg/cors"
-	"github.com/kamalyes/go-config/pkg/security"
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
-	"github.com/kamalyes/go-rpc-gateway/response"
-	"github.com/kamalyes/go-toolbox/pkg/mathx"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
+	"github.com/HitGameAI/apex-cos/pkg/cors"
+	"github.com/HitGameAI/apex-cos/pkg/security"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	"github.com/HitGameAI/apex-rpc-gateway/response"
+	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )
 
 // CORSMiddleware CORS 中间件

@@ -12,7 +12,7 @@
 package server
 
 import (
-	"github.com/kamalyes/go-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
 )
 
 // EnableSwagger 启用 Swagger 文档服务（通过 middleware manager）

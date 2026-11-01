@@ -15,8 +15,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	commonapis "github.com/kamalyes/go-rpc-gateway/proto"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	commonapis "github.com/HitGameAI/apex-rpc-gateway/proto"
 )
 
 // WriteErrorResult 写入错误响应

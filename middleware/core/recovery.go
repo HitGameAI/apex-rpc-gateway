@@ -18,12 +18,12 @@ import (
 	"net/http"
 	"runtime"
 
-	"github.com/kamalyes/go-config/pkg/recovery"
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	commonapis "github.com/kamalyes/go-rpc-gateway/proto"
-	"github.com/kamalyes/go-toolbox/pkg/httpx"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	"github.com/HitGameAI/apex-cos/pkg/recovery"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	commonapis "github.com/HitGameAI/apex-rpc-gateway/proto"
+	"github.com/HitGameAI/apex-toolbox/pkg/httpx"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )
 
 // RecoveryMiddleware 恢复中间件 - 处理 panic 恢复

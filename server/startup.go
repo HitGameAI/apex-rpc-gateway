@@ -16,9 +16,9 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-toolbox/pkg/mathx"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )
 
 type startupField struct {

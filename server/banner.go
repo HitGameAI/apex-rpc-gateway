@@ -15,10 +15,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/kamalyes/go-config/pkg/banner"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	"github.com/HitGameAI/apex-cos/pkg/banner"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )
 
 // BannerManager 横幅管理器

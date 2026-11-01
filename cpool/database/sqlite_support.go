@@ -19,9 +19,9 @@ package database
 import (
 	"context"
 
-	"github.com/kamalyes/go-config/pkg/database"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	gologger "github.com/kamalyes/go-logger"
+	"github.com/HitGameAI/apex-cos/pkg/database"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	gologger "github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )

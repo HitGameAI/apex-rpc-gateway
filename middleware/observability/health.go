@@ -18,7 +18,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/kamalyes/go-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
 	"github.com/redis/go-redis/v9"
 	"gorm.io/gorm"
 )

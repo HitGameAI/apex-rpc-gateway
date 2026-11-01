@@ -17,9 +17,9 @@ import (
 	"context"
 	"time"
 
-	queue "github.com/kamalyes/go-config/pkg/queue"
-	"github.com/kamalyes/go-logger"
-	natsx "github.com/kamalyes/go-natsx"
+	queue "github.com/HitGameAI/apex-cos/pkg/queue"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	natsx "github.com/HitGameAI/apex-toolbox/pkg/natsx"
 	"github.com/nats-io/nats.go"
 )
 

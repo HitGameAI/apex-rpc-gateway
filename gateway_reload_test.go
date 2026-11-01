@@ -13,7 +13,7 @@ package gateway
 import (
 	"testing"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	"github.com/stretchr/testify/assert"
 )
 

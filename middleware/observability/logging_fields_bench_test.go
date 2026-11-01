@@ -3,8 +3,8 @@ package observability
 import (
 	"testing"
 
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-toolbox/pkg/mathx"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
 )
 
 // sink 防止编译器把整段消掉 —— 不逃逸时 make+append 会被整体优化掉，

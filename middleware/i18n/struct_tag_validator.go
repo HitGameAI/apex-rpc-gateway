@@ -24,8 +24,8 @@ import (
 	"sync"
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
-	validator "github.com/kamalyes/go-argus"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
+	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

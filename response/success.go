@@ -14,7 +14,7 @@ package response
 import (
 	"net/http"
 
-	commonapis "github.com/kamalyes/go-rpc-gateway/proto"
+	commonapis "github.com/HitGameAI/apex-rpc-gateway/proto"
 )
 
 // WriteSuccessResult 写入成功响应

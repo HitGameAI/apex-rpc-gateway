@@ -15,11 +15,11 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-rpc-gateway/errors"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	commonapis "github.com/kamalyes/go-rpc-gateway/proto"
-	"github.com/kamalyes/go-toolbox/pkg/httpx"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-rpc-gateway/errors"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	commonapis "github.com/HitGameAI/apex-rpc-gateway/proto"
+	"github.com/HitGameAI/apex-toolbox/pkg/httpx"
 )
 
 // WriteErrorResponse 写入标准化的错误响应

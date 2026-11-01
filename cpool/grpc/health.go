@@ -17,7 +17,7 @@ import (
 	"sync"
 	"time"
 
-	gwglobal "github.com/kamalyes/go-rpc-gateway/global"
+	gwglobal "github.com/HitGameAI/apex-rpc-gateway/global"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/connectivity"

@@ -33,8 +33,8 @@ import (
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/utilities"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	gwglobal "github.com/kamalyes/go-rpc-gateway/global"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	gwglobal "github.com/HitGameAI/apex-rpc-gateway/global"
 	"google.golang.org/genproto/googleapis/api/annotations"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

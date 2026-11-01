@@ -20,11 +20,11 @@ import (
 	"strings"
 	"sync"
 
-	validator "github.com/kamalyes/go-argus"
-	gopprof "github.com/kamalyes/go-config/pkg/pprof"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-toolbox/pkg/mathx"
-	"github.com/kamalyes/go-toolbox/pkg/netx"
+	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
+	gopprof "github.com/HitGameAI/apex-cos/pkg/pprof"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
+	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )
 
 // PProfServer 可控制的pprof服务器实例 它允许在配置更改时停止和重新创建服务器

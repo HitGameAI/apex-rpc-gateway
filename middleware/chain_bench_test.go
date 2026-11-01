@@ -19,9 +19,9 @@ import (
 	"strings"
 	"testing"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-rpc-gateway/global"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
 )
 
 // benchTarget 链末端的 handler，写一个与压测台相同量级的响应

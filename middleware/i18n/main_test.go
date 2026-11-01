@@ -15,9 +15,9 @@ import (
 	"os"
 	"testing"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	"github.com/kamalyes/go-logger"
-	"github.com/kamalyes/go-rpc-gateway/global"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
 )
 
 // TestMain 测试入口

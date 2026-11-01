@@ -18,12 +18,12 @@ import (
 	"net/http"
 	"time"
 
-	validator "github.com/kamalyes/go-argus"
-	"github.com/kamalyes/go-config/pkg/signature"
-	"github.com/kamalyes/go-rpc-gateway/constants"
-	"github.com/kamalyes/go-rpc-gateway/global"
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
-	"github.com/kamalyes/go-rpc-gateway/response"
+	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
+	"github.com/HitGameAI/apex-cos/pkg/signature"
+	"github.com/HitGameAI/apex-rpc-gateway/constants"
+	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	"github.com/HitGameAI/apex-rpc-gateway/response"
 	"github.com/redis/go-redis/v9"
 )
 

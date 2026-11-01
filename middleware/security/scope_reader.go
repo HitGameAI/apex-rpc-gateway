@@ -13,7 +13,7 @@ package security
 import (
 	"context"
 
-	"github.com/kamalyes/go-rpc-gateway/middleware/core"
+	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
 )
 
 // ContextScopeReader 将 go-rpc-gateway 的请求上下文适配为外部作用域读取接口

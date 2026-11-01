@@ -39,8 +39,8 @@ import (
 	"net/http"
 	"sync/atomic"
 
-	gccommon "github.com/kamalyes/go-config/pkg/common"
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
+	gccommon "github.com/HitGameAI/apex-cos/pkg/common"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 )
 
 // attrSpec 把配置里的一份来源清单与 RequestCommonMeta 的一个字段绑在一起

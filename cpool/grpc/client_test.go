@@ -16,8 +16,8 @@ import (
 	"testing"
 	"time"
 
-	gwconfig "github.com/kamalyes/go-config/pkg/gateway"
-	gwglobal "github.com/kamalyes/go-rpc-gateway/global"
+	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
+	gwglobal "github.com/HitGameAI/apex-rpc-gateway/global"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 )

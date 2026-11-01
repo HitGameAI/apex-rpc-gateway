@@ -1,4 +1,4 @@
-module github.com/kamalyes/go-rpc-gateway
+module github.com/HitGameAI/apex-rpc-gateway
 
 go 1.25.0
 
@@ -9,15 +9,6 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus v1.1.1
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.30.0
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
-	github.com/kamalyes/go-argus v0.5.2
-	github.com/kamalyes/go-config v0.25.2
-	github.com/kamalyes/go-i18n v0.3.1
-	github.com/kamalyes/go-logger v0.10.0
-	github.com/kamalyes/go-natsx v0.6.0
-	github.com/kamalyes/go-sqlbuilder v0.8.2
-	github.com/kamalyes/go-swagger v0.11.0
-	github.com/kamalyes/go-toolbox v0.19.3
-	github.com/kamalyes/go-wsc v0.11.19
 	github.com/nats-io/nats.go v1.53.1
 	github.com/prometheus/client_golang v1.24.1
 	github.com/redis/go-redis/v9 v9.22.0
@@ -54,7 +45,6 @@ require (
 	github.com/jackc/pgx/v5 v5.10.0 // indirect
 	github.com/jackc/puddle/v2 v2.2.2 // indirect
 	github.com/jpillora/backoff v1.0.0 // indirect
-	github.com/kamalyes/go-pbmo v0.3.2 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/lib/pq v1.12.3 // indirect
 	github.com/mattn/go-sqlite3 v1.14.22 // indirect
@@ -67,15 +57,15 @@ require (
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/spf13/viper v1.21.0 // indirect
 	github.com/yuin/gopher-lua v1.1.2 // indirect
-	go.uber.org/atomic v1.11.0 // indirect
+	go.uber.org/atomic v1.12.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
 )
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bwmarrin/snowflake v0.3.0
-	github.com/bytedance/sonic v1.15.3 // indirect
-	github.com/bytedance/sonic/loader v0.5.2 // indirect
+	github.com/bytedance/sonic v1.15.5 // indirect
+	github.com/bytedance/sonic/loader v0.5.3 // indirect
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.7 // indirect
@@ -84,13 +74,12 @@ require (
 	github.com/eclipse/paho.mqtt.golang v1.5.1
 	github.com/go-logr/logr v1.4.4
 	github.com/go-logr/stdr v1.2.2 // indirect
-	github.com/goccy/go-json v0.10.6 // indirect
+	github.com/goccy/go-json v0.12.0 // indirect
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/kamalyes/go-cachex v0.5.1
 	github.com/klauspost/compress v1.20.3
 	github.com/klauspost/cpuid/v2 v2.4.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -122,15 +111,11 @@ require (
 )
 
 // 替换为HitGameAI的版本
-replace (
-	github.com/kamalyes/go-argus => github.com/HitGameAI/go-argus v0.5.2
-	github.com/kamalyes/go-cachex => github.com/HitGameAI/go-cachex v0.5.1
-	github.com/kamalyes/go-config => github.com/HitGameAI/go-config v0.25.2
-	github.com/kamalyes/go-logger => github.com/HitGameAI/go-logger v0.9.2
-	github.com/kamalyes/go-natsx => github.com/HitGameAI/go-natsx v0.6.1
-	github.com/kamalyes/go-pbmo => github.com/HitGameAI/go-pbmo v0.3.2
-	github.com/kamalyes/go-sqlbuilder => github.com/HitGameAI/go-sqlbuilder v0.8.2
-	github.com/kamalyes/go-swagger => github.com/HitGameAI/go-swagger v0.7.1
-	github.com/kamalyes/go-toolbox => github.com/HitGameAI/go-toolbox v0.19.3
-	github.com/kamalyes/go-wsc => github.com/HitGameAI/go-wsc v0.12.0
-)
+
+require github.com/HitGameAI/apex-toolbox v0.19.4
+
+require github.com/HitGameAI/apex-cos v0.25.3
+
+require github.com/HitGameAI/apex-wsc v0.12.1
+
+require github.com/HitGameAI/apex-swagger v0.11.1
