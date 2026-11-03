@@ -9,14 +9,14 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus v1.1.1
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.30.0
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
-	github.com/kamalyes/go-argus v0.5.1
-	github.com/kamalyes/go-config v0.25.1
+	github.com/kamalyes/go-argus v0.5.2
+	github.com/kamalyes/go-config v0.25.2
 	github.com/kamalyes/go-i18n v0.3.1
 	github.com/kamalyes/go-logger v0.10.0
 	github.com/kamalyes/go-natsx v0.6.0
-	github.com/kamalyes/go-sqlbuilder v0.8.0
+	github.com/kamalyes/go-sqlbuilder v0.8.2
 	github.com/kamalyes/go-swagger v0.11.0
-	github.com/kamalyes/go-toolbox v0.19.2
+	github.com/kamalyes/go-toolbox v0.19.3
 	github.com/kamalyes/go-wsc v0.11.19
 	github.com/nats-io/nats.go v1.53.1
 	github.com/prometheus/client_golang v1.24.1
@@ -54,7 +54,7 @@ require (
 	github.com/jackc/pgx/v5 v5.10.0 // indirect
 	github.com/jackc/puddle/v2 v2.2.2 // indirect
 	github.com/jpillora/backoff v1.0.0 // indirect
-	github.com/kamalyes/go-pbmo v0.3.1 // indirect
+	github.com/kamalyes/go-pbmo v0.3.2 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/lib/pq v1.12.3 // indirect
 	github.com/mattn/go-sqlite3 v1.14.22 // indirect
@@ -90,7 +90,7 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/kamalyes/go-cachex v0.5.0
+	github.com/kamalyes/go-cachex v0.5.1
 	github.com/klauspost/compress v1.20.3
 	github.com/klauspost/cpuid/v2 v2.4.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -121,21 +121,16 @@ require (
 	gopkg.in/yaml.v3 v3.0.1
 )
 
-// 本地开发替换
-// replace github.com/kamalyes/go-wsc => ./go-wsc
-
-// replace github.com/kamalyes/go-cachex => ../go-cachex
-
-// replace github.com/kamalyes/go-sqlbuilder => ../go-sqlbuilder
-
-// replace github.com/kamalyes/go-config => ../go-config
-
-// replace github.com/kamalyes/go-logger => ../go-logger
-
-// replace github.com/kamalyes/go-toolbox => ../go-toolbox
-
-// replace github.com/kamalyes/go-i18n => ../go-i18n
-
-// replace github.com/kamalyes/go-pbmo => ../go-pbmo
-
-// replace github.com/kamalyes/go-natsx => ../go-natsx
+// 替换为HitGameAI的版本
+replace (
+	github.com/kamalyes/go-argus => github.com/HitGameAI/go-argus v0.5.2
+	github.com/kamalyes/go-cachex => github.com/HitGameAI/go-cachex v0.5.1
+	github.com/kamalyes/go-config => github.com/HitGameAI/go-config v0.25.2
+	github.com/kamalyes/go-logger => github.com/HitGameAI/go-logger v0.9.2
+	github.com/kamalyes/go-natsx => github.com/HitGameAI/go-natsx v0.6.1
+	github.com/kamalyes/go-pbmo => github.com/HitGameAI/go-pbmo v0.3.2
+	github.com/kamalyes/go-sqlbuilder => github.com/HitGameAI/go-sqlbuilder v0.8.2
+	github.com/kamalyes/go-swagger => github.com/HitGameAI/go-swagger v0.7.1
+	github.com/kamalyes/go-toolbox => github.com/HitGameAI/go-toolbox v0.19.3
+	github.com/kamalyes/go-wsc => github.com/HitGameAI/go-wsc v0.12.0
+)
