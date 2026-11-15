@@ -658,7 +658,7 @@ const file_proto_common_proto_rawDesc = "" +
 	"\x14SYSTEM_UNKNOWN_ERROR\x10e\x12\x18\n" +
 	"\x14SYSTEM_NETWORK_ERROR\x10f\x12\x18\n" +
 	"\x14SYSTEM_STORAGE_ERROR\x10g\"\x04\b\x11\x10d\"\x05\bh\x10\xc8\x01BX\n" +
-	"\"com.github.kamalyes.commonapis.apiZ2github.com/HitGameAI/apex-rpc-gateway/pbuf/commonapisb\x06proto3"
+	"\"com.github.kamalyes.commonapis.apiZ2github.com/kamalyes/go-rpc-gateway/pbuf/commonapisb\x06proto3"
 
 var (
 	file_proto_common_proto_rawDescOnce sync.Once
