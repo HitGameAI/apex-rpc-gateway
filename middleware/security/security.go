@@ -19,7 +19,6 @@ import (
 	"strings"
 	"time"
 
-	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
 	"github.com/HitGameAI/apex-cos/pkg/cors"
 	"github.com/HitGameAI/apex-cos/pkg/security"
 	"github.com/HitGameAI/apex-rpc-gateway/constants"
@@ -27,6 +26,7 @@ import (
 	"github.com/HitGameAI/apex-rpc-gateway/global"
 	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
 	"github.com/HitGameAI/apex-rpc-gateway/response"
+	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
 	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
 	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )

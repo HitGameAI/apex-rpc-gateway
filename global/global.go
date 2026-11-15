@@ -16,15 +16,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/bwmarrin/snowflake"
 	goconfig "github.com/HitGameAI/apex-cos"
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
-	"github.com/HitGameAI/apex-toolbox/pkg/logger"
-	"github.com/HitGameAI/apex-toolbox/pkg/natsx"
 	"github.com/HitGameAI/apex-rpc-gateway/cpool"
 	natsclient "github.com/HitGameAI/apex-rpc-gateway/cpool/nats"
 	"github.com/HitGameAI/apex-toolbox/pkg/desensitize"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/HitGameAI/apex-toolbox/pkg/natsx"
 	gowsc "github.com/HitGameAI/apex-wsc"
+	"github.com/bwmarrin/snowflake"
 	"github.com/redis/go-redis/v9"
 	"gorm.io/gorm"
 )

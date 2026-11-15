@@ -13,7 +13,6 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	"github.com/HitGameAI/apex-cos/pkg/ratelimit"
 	"github.com/HitGameAI/apex-rpc-gateway/errors"
@@ -24,6 +23,7 @@ import (
 	"github.com/HitGameAI/apex-rpc-gateway/middleware/resilience"
 	"github.com/HitGameAI/apex-rpc-gateway/middleware/security"
 	swaggerMiddleware "github.com/HitGameAI/apex-swagger"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 )
 

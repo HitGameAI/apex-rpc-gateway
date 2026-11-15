@@ -20,9 +20,9 @@ import (
 	"strings"
 	"sync"
 
-	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
 	gopprof "github.com/HitGameAI/apex-cos/pkg/pprof"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
+	validator "github.com/HitGameAI/apex-toolbox/pkg/argus"
 	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
 	"github.com/HitGameAI/apex-toolbox/pkg/netx"
 )

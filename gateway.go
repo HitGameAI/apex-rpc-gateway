@@ -23,8 +23,6 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/bwmarrin/snowflake"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	goconfig "github.com/HitGameAI/apex-cos"
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	"github.com/HitGameAI/apex-rpc-gateway/cpool"
@@ -34,6 +32,8 @@ import (
 	"github.com/HitGameAI/apex-rpc-gateway/middleware"
 	"github.com/HitGameAI/apex-rpc-gateway/server"
 	"github.com/HitGameAI/apex-toolbox/pkg/safe"
+	"github.com/bwmarrin/snowflake"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/redis/go-redis/v9"
 	"google.golang.org/grpc"
 	"gorm.io/gorm"

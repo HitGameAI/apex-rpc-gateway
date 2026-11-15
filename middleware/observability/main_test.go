@@ -16,8 +16,8 @@ import (
 	"testing"
 
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
-	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 )
 
 // TestMain 测试入口

@@ -20,8 +20,8 @@ import (
 	"testing"
 
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
-	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 )
 
 // benchTarget 链末端的 handler，写一个与压测台相同量级的响应

@@ -17,9 +17,9 @@ import (
 	"testing"
 
 	gci18n "github.com/HitGameAI/apex-cos/pkg/i18n"
-	goi18n "github.com/HitGameAI/apex-toolbox/pkg/i18n"
 	"github.com/HitGameAI/apex-rpc-gateway/constants"
 	gwerrors "github.com/HitGameAI/apex-rpc-gateway/errors"
+	goi18n "github.com/HitGameAI/apex-toolbox/pkg/i18n"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"

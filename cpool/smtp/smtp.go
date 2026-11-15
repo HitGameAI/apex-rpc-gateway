@@ -15,10 +15,10 @@ import (
 	"context"
 	"net/smtp"
 
-	"github.com/jordan-wright/email"
 	smtpconfig "github.com/HitGameAI/apex-cos/pkg/smtp"
 	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"github.com/HitGameAI/apex-toolbox/pkg/netx"
+	"github.com/jordan-wright/email"
 )
 
 // MailHandler SMTP邮件处理接口
