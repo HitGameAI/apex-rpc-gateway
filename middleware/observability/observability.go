@@ -16,11 +16,11 @@ import (
 	"sync"
 	"time"
 
-	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus"
 	"github.com/HitGameAI/apex-cos/pkg/monitoring"
 	"github.com/HitGameAI/apex-rpc-gateway/constants"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
 	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-middleware/providers/prometheus"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

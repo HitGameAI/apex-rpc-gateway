@@ -19,10 +19,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-sql-driver/mysql"
 	"github.com/HitGameAI/apex-cos/pkg/database"
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	gologger "github.com/HitGameAI/apex-toolbox/pkg/logger"
+	"github.com/go-sql-driver/mysql"
 	mysqldriver "gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

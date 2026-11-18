@@ -23,7 +23,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	"github.com/HitGameAI/apex-rpc-gateway/constants"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
@@ -33,6 +32,7 @@ import (
 	"github.com/HitGameAI/apex-toolbox/pkg/httpx"
 	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
 	"github.com/HitGameAI/apex-toolbox/pkg/netx"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"

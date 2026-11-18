@@ -15,11 +15,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	gwconfig "github.com/HitGameAI/apex-cos/pkg/gateway"
 	grpcpool "github.com/HitGameAI/apex-rpc-gateway/cpool/grpc"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
 	"github.com/HitGameAI/apex-rpc-gateway/server"
+	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 )

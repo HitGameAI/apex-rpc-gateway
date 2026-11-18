@@ -19,10 +19,10 @@ import (
 	"strings"
 
 	gci18n "github.com/HitGameAI/apex-cos/pkg/i18n"
-	goi18n "github.com/HitGameAI/apex-toolbox/pkg/i18n"
 	"github.com/HitGameAI/apex-rpc-gateway/constants"
 	"github.com/HitGameAI/apex-rpc-gateway/errors"
 	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	goi18n "github.com/HitGameAI/apex-toolbox/pkg/i18n"
 	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
