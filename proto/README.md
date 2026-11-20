@@ -13,9 +13,9 @@ proto/
 
 > **包名与导入路径**:生成的 Go 包名是 `commonapis`,但文件就落在 `proto/` 目录下,所以代码里按目录路径导入、用别名指向包名:
 > ```go
-> commonapis "github.com/kamalyes/go-rpc-gateway/proto"
+> commonapis "github.com/HitGameAI/apex-rpc-gateway/proto"
 > ```
-> `common.proto` 里的 `option go_package` 写的是 `.../pbuf/commonapis`,那是早期的历史值且**已经对不上实际布局**——因为生成时用了 `paths=source_relative`,go_package 的目录部分会被忽略,只有最后一段的包名 `commonapis` 生效,所以一直没暴露出来 改它会连带改所有导入,没有必要
+> `common.proto` 的 `go_package` 与实际导入路径一致，通过 `;commonapis` 显式保留 Go 包名。修改模块路径时应先更新 `.proto` 再重新生成，直接替换 `.pb.go` 中的描述符字符串会破坏 protobuf 的长度编码，导致导入包时 panic。
 
 ## 公共消息定义 (common.proto)
 
@@ -102,21 +102,21 @@ message TimeRange {
 protoc -I. --go_out=. --go_opt=paths=source_relative proto/common.proto
 ```
 
-就这一条,不需要 buf、不需要脚本、不需要 Makefile
+也可以在仓库根目录运行 `go generate ./proto`。本次生成使用 protoc 24.3 和 protoc-gen-go v1.36.11。
 
 四点说明:
 
 | 点 | 说明 |
 |---|---|
 | `-I.` 是必须的 | 从仓库根执行,`proto/common.proto` 这个相对路径才解析得到 |
-| `paths=source_relative` 是必须的 | 它让产物落在 `.proto` 旁边(即 `proto/common.pb.go`),而不是按 `go_package` 建一层 `pbuf/commonapis/` 目录 |
+| `paths=source_relative` 是必须的 | 它让产物落在 `.proto` 旁边(即 `proto/common.pb.go`),而不是按完整导入路径创建目录 |
 | **只需要 `protoc-gen-go` 一个插件** | `common.proto` 里**没有 `service`**,所以不生成 `*_grpc.pb.go`;没有 `google.api.http` 注解,所以不生成 `*.gw.go` 与 swagger;没有 `@inject_tag` 注释,所以不需要 `protoc-go-inject-tag` |
 | 重新生成会改动版本注释 | 产物头部记录的是**本机**的 protoc 与插件版本,与提交时的版本不同就会产生 4 行 diff,这是正常的,不是生成出错 |
 
 安装插件:
 
 ```bash
-go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.36.11
 ```
 
 `protoc` 本体按平台装(macOS `brew install protobuf`,或从 protobuf releases 下载),并确保 `$GOPATH/bin` 在 `PATH` 里,否则 `protoc` 找不到 `protoc-gen-go`
@@ -124,7 +124,7 @@ go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 ## 改动 common.proto 之后
 
 1. 跑上面那条命令
-2. `go build ./...` 确认编译通过
+2. `go test ./proto ./errors ./response` 验证包初始化、描述符和序列化；仅编译不能发现初始化 panic
 3. `git diff proto/common.pb.go` 检查产物变化与 proto 改动一致
 
 > 字段编号一旦发布就不要改动或复用——这是跨服务共享的契约,改编号会让旧客户端静默解析错位
