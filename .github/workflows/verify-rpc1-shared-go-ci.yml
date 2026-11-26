@@ -1,0 +1,49 @@
+name: Verify RPC 1 Shared Go CI
+
+on:
+  push:
+    branches: [codex/verify-rpc1-shared-go-ci-20261126]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: >-
+      github.repository == 'HitGameAI/apex-rpc-gateway'
+      && github.actor == 'FJ-Tony'
+      && github.event_name == 'push'
+      && github.ref == 'refs/heads/codex/verify-rpc1-shared-go-ci-20261126'
+      && github.run_attempt == 1
+      && github.event.created == true
+      && github.event.deleted == false
+      && github.event.forced == false
+      && github.event.before == '0000000000000000000000000000000000000000'
+      && github.event.after == github.sha
+    uses: HitGameAI/deploy-pipeline/.github/workflows/go-library-test.yml@fe59068c93c25b65ce4b9db6e8e5d801533e7d27
+    with:
+      go-versions: '["1.25.0"]'
+      platforms: '["ubuntu-latest"]'
+      gotestsum-version: v1.13.0
+      test-flags: '-race -count=1 -mod=readonly -exec=run-rpc-tests-on-loopback'
+      test-timeout: 10m
+      coverage-go-version: '1.25.0'
+      coverage-platform: ubuntu-latest
+      coverage-upload: false
+      setup-script: |
+        python3 - <<'PY'
+        import hashlib, json, os
+        from pathlib import Path
+        root = Path(os.environ['GITHUB_WORKSPACE'])
+        seal_bytes = (root / '.github/ci/rpc-shared-seal.json').read_bytes()
+        assert hashlib.sha256(seal_bytes).hexdigest() == 'd1862b6b2f89f58b501a5566a91393947c02f29815033457a5fd05b214677a00'
+        for path, expected in json.loads(seal_bytes)['components'].items():
+            assert hashlib.sha256((root / path).read_bytes()).hexdigest() == expected
+        PY
+        test -x "$GITHUB_WORKSPACE/.github/ci/run-rpc-tests-on-loopback"
+        python3 "$GITHUB_WORKSPACE/.github/ci/rpc-shared-proof.py" prepare
+      post-test-script: |
+        git diff --exit-code -- go.mod go.sum
+        test -z "$(gofmt -s -l .)"
+        test -s coverage.txt
+        python3 "$GITHUB_WORKSPACE/.github/ci/rpc-shared-proof.py" verify

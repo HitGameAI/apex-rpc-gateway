@@ -1,0 +1,10 @@
+{
+  "components": {
+    ".github/ci/rpc-shared-proof.py": "f2058e7d5276778e07a97df28abf29badd5470b197472d8ec24d9b08e5005cd2",
+    ".github/ci/rpc-shared-source-pins.json": "fcb86f2dbb171da48a25224df38d100d572c39ca433554a1d20ad0a3f48ed769",
+    ".github/ci/run-rpc-tests-on-loopback": "ee5bf8ae8ff8e770d461916e751b74acbb33c8ddca83b3fd084bcb8f9570297e"
+  },
+  "schema": 1,
+  "source_rpc_preview": "4469574177ce1520f805667e621d6bbe2ac6b216",
+  "source_wsc_commit": "d1e7c62a7b560176007c67aa0ff04679d2727267"
+}
