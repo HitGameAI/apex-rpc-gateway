@@ -1,0 +1,51 @@
+{
+  "./adapter/gorm": [
+    "TestExecWithSQLRetry_CtxCancelledDuringBackoff",
+    "TestExecWithSQLRetry_CtxDeadlineDuringRetries",
+    "TestExecWithSQLRetry_ExhaustedReturnsLastError",
+    "TestExecWithSQLRetry_FirstAttemptSuccess",
+    "TestExecWithSQLRetry_NonRetryableImmediate",
+    "TestExecWithSQLRetry_SuccessAfterTwoRetries",
+    "TestIsRetryableSQLState",
+    "TestNewSQLRetryBackoff"
+  ],
+  "./broker": [
+    "TestDedupWindow_ConcurrentSameKey",
+    "TestDedupWindow_Defaults",
+    "TestDedupWindow_ExpiredAfterTwoGenerations",
+    "TestDedupWindow_FirstSeen",
+    "TestDedupWindow_RolloverCrossGeneration"
+  ],
+  "./cluster": [
+    "TestBatchOnlineRefusalPreservesIndex"
+  ],
+  "./hub": [
+    "TestAdmissionReplacementRetainsPendingFrames",
+    "TestCrossNodeRefusalIsNotSuccessOrUserMiss",
+    "TestGRPCSendToUserReportsAdmissionRefusal"
+  ],
+  "./messaging": [
+    "TestBroadcastWritesDoNotLeavePhantomBacklog",
+    "TestDataWriteSettlesPendingFrames",
+    "TestHeldDeliveryRefusalFallsBackOffline",
+    "TestIsRetryableError",
+    "TestJSONPeekTopLevelString",
+    "TestJSONPeek_AgreesWithUnmarshal",
+    "TestLocalPartialDeviceDeliveryCountsOnlyAccepted",
+    "TestNoticeOfflineReplayAndExplicitSkip",
+    "TestP2PFailedOrSkippedStorageNeverReportsQueued",
+    "TestP2PRefusalReportsFailureOrConfirmedOfflineStorage",
+    "TestSendScenario_NonRetryableSentinelNotRetried",
+    "TestSendToUserWithRetryOfflineNoHandler",
+    "TestSendToUserWithRetryOnline"
+  ],
+  "./models": [
+    "TestMarshalJSONBytesEqualJSONMarshal",
+    "TestPendingFramesConcurrentTeardown",
+    "TestPendingFramesSettleOnWriteFailureAndDisconnect"
+  ],
+  "./overload": [
+    "TestAdmissionPendingBacklogAndRecovery",
+    "TestAdmissionUnboundCounterAlwaysDrains"
+  ]
+}
