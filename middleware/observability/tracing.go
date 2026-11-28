@@ -67,13 +67,13 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/go-logr/logr"
 	"github.com/HitGameAI/apex-cos/pkg/tracing"
-	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"github.com/HitGameAI/apex-rpc-gateway/constants"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
 	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
+	"github.com/HitGameAI/apex-toolbox/pkg/logger"
 	"github.com/HitGameAI/apex-toolbox/pkg/netx"
+	"github.com/go-logr/logr"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
@@ -362,7 +362,7 @@ func setSpanAttributes(span oteltrace.Span, r *http.Request) {
 	// ---- HTTP 基础属性 ----
 	span.SetAttributes(
 		attribute.String(constants.TracingAttrHTTPMethod, r.Method),
-		attribute.String(constants.TracingAttrHTTPURL, r.URL.String()),
+		attribute.String(constants.TracingAttrHTTPURL, redactRequestURL(r)),
 		attribute.String(constants.TracingAttrHTTPPath, r.URL.Path),
 		attribute.String(constants.TracingAttrHTTPScheme, r.URL.Scheme),
 		attribute.String(constants.TracingAttrHTTPHost, r.Host),
@@ -379,12 +379,12 @@ func setSpanAttributes(span oteltrace.Span, r *http.Request) {
 
 	// 查询参数
 	if r.URL.RawQuery != "" {
-		span.SetAttributes(attribute.String(constants.TracingAttrHTTPQuery, r.URL.RawQuery))
+		span.SetAttributes(attribute.String(constants.TracingAttrHTTPQuery, maskedText(activeMasker(), r.URL.RawQuery)))
 	}
 
 	// Referer
 	if referer := r.Referer(); referer != "" {
-		span.SetAttributes(attribute.String(constants.TracingAttrHTTPReferer, referer))
+		span.SetAttributes(attribute.String(constants.TracingAttrHTTPReferer, scrubCredentials(referer)))
 	}
 
 	// X-Forwarded-For（记录原始转发链路）
@@ -597,7 +597,7 @@ func WSCTracingWrapper(manager *TracingManager, handler http.HandlerFunc) http.H
 		// 设置 HTTP 基础属性
 		span.SetAttributes(
 			attribute.String(constants.TracingAttrHTTPMethod, r.Method),
-			attribute.String(constants.TracingAttrHTTPURL, r.URL.String()),
+			attribute.String(constants.TracingAttrHTTPURL, redactRequestURL(r)),
 			attribute.String(constants.TracingAttrHTTPPath, r.URL.Path),
 			attribute.String(constants.TracingAttrHTTPClientIP, netx.GetClientIP(r)),
 			attribute.String(constants.TracingAttrHTTPFlavor, r.Proto),

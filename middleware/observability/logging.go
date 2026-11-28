@@ -161,7 +161,7 @@ func (lf *LogFields) AddRequestContext(ctx context.Context) *LogFields {
 	return lf.
 		Add(constants.LogFieldTraceID, requestCommonMeta.TraceID).
 		Add(constants.LogFieldRequestID, requestCommonMeta.RequestID).
-		Add(constants.LogFieldAuthorization, requestCommonMeta.Authorization).
+		Add(constants.LogFieldAuthorization, redactAuthorization(requestCommonMeta.Authorization)).
 		Add(constants.LogFieldID, requestCommonMeta.ID).
 		Add(constants.LogFieldUserID, requestCommonMeta.UserID).
 		Add(constants.LogFieldDomain, requestCommonMeta.Domain).
@@ -474,17 +474,17 @@ func logHTTPRequest(ctx context.Context, r *http.Request, rw *core.ResponseWrite
 
 	// 请求参数
 	if config.EnableRequest && r.URL.RawQuery != "" {
-		fields.Add(constants.LogFieldQuery, r.URL.RawQuery)
+		fields.Add(constants.LogFieldQuery, maskedText(masker, r.URL.RawQuery))
 	}
 
 	// 请求体
 	if len(reqBody) > 0 && isLoggableContentType(config, r.Header.Get(constants.HeaderContentType)) {
-		fields.Add(constants.LogFieldRequest, masker.Mask(reqBody))
+		fields.Add(constants.LogFieldRequest, scrubCredentials(masker.Mask(reqBody)))
 	}
 
 	// 响应体
 	if respBody := rw.GetBody(); len(respBody) > 0 && isLoggableContentType(config, rw.Header().Get(constants.HeaderContentType)) {
-		fields.Add(constants.LogFieldResponse, masker.Mask(respBody))
+		fields.Add(constants.LogFieldResponse, scrubCredentials(masker.Mask(respBody)))
 	}
 
 	level := constants.LogLevelInfo
@@ -569,18 +569,18 @@ func logGRPCUnaryCommon(ctx context.Context, component, fullMethod, serviceName 
 
 	if err != nil {
 		st, _ := status.FromError(err)
-		fields.Add(constants.LogFieldStatus, st.Code().String()).Add(constants.LogFieldError, st.Message())
+		fields.Add(constants.LogFieldStatus, st.Code().String()).Add(constants.LogFieldError, maskedText(masker, st.Message()))
 		if captureReq && req != nil {
-			fields.Add(constants.LogFieldRequest, masker.Mask(marshalProto(req)))
+			fields.Add(constants.LogFieldRequest, scrubCredentials(masker.Mask(marshalProto(req))))
 		}
 		logger.Log(constants.LogLevelError, "❌ "+errMsg, fields)
 	} else {
 		fields.Add(constants.LogFieldStatus, "OK")
 		if captureReq && req != nil {
-			fields.Add(constants.LogFieldRequest, masker.Mask(marshalProto(req)))
+			fields.Add(constants.LogFieldRequest, scrubCredentials(masker.Mask(marshalProto(req))))
 		}
 		if captureResp && resp != nil {
-			fields.Add(constants.LogFieldResponse, masker.Mask(marshalProto(resp)))
+			fields.Add(constants.LogFieldResponse, scrubCredentials(masker.Mask(marshalProto(resp))))
 		}
 		logger.Log(constants.LogLevelInfo, "✅ "+successMsg, fields)
 	}
@@ -608,7 +608,7 @@ func logGRPCStreamCommon(ctx context.Context, component, fullMethod, serviceName
 
 	if err != nil {
 		st, _ := status.FromError(err)
-		fields.Add(constants.LogFieldStatus, st.Code().String()).Add(constants.LogFieldError, st.Message())
+		fields.Add(constants.LogFieldStatus, st.Code().String()).Add(constants.LogFieldError, maskedText(activeMasker(), st.Message()))
 		logger.Log(constants.LogLevelError, "❌ "+errMsg, fields)
 	} else {
 		fields.Add(constants.LogFieldStatus, "OK")

@@ -18,13 +18,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/google/uuid"
 	"github.com/HitGameAI/apex-rpc-gateway/constants"
 	"github.com/HitGameAI/apex-rpc-gateway/global"
 	"github.com/HitGameAI/apex-rpc-gateway/middleware/core"
-	sqltypes "github.com/HitGameAI/apex-toolbox/pkg/sqlbuilder/types"
 	"github.com/HitGameAI/apex-toolbox/pkg/mathx"
 	"github.com/HitGameAI/apex-toolbox/pkg/netx"
+	sqltypes "github.com/HitGameAI/apex-toolbox/pkg/sqlbuilder/types"
+	"github.com/google/uuid"
 	"gorm.io/gorm"
 )
 
@@ -144,7 +144,7 @@ func DispatchAccessLog(ctx context.Context, rec *AccessRecord) {
 // 仅在 HasAccessLogHandlers() 为 true 时调用，零钩子场景零开销
 func captureAccessLog(ctx context.Context, r *http.Request, rw *core.ResponseWriter, start time.Time, duration time.Duration, reqBody, respBody []byte, slowThreshold time.Duration) {
 	meta := core.GetRequestCommonMeta(ctx)
-	masker := global.DATAMASKER
+	masker := activeMasker()
 
 	serviceName := ""
 	if global.GATEWAY != nil {
@@ -159,14 +159,14 @@ func captureAccessLog(ctx context.Context, r *http.Request, rw *core.ResponseWri
 		DurationMS:   duration.Milliseconds(),
 		Method:       r.Method,
 		Path:         r.URL.Path,
-		Query:        r.URL.RawQuery,
-		Headers:      sqltypes.CompressedTextMap(r.Header),
-		Body:         sqltypes.CompressedText(masker.Mask(reqBody)),
+		Query:        maskedText(masker, r.URL.RawQuery),
+		Headers:      sqltypes.CompressedTextMap(redactHeaders(r.Header)),
+		Body:         sqltypes.CompressedText(scrubCredentials(masker.Mask(reqBody))),
 		UserAgent:    r.Header.Get(constants.HeaderUserAgent),
 		Source:       mathx.IfEmpty(r.Header.Get(constants.HeaderXSource), meta.Domain),
 		StatusCode:   int32(rw.StatusCode()),
 		Status:       http.StatusText(rw.StatusCode()),
-		Response:     sqltypes.CompressedText(masker.Mask(respBody)),
+		Response:     sqltypes.CompressedText(scrubCredentials(masker.Mask(respBody))),
 		Bytes:        rw.BytesWritten(),
 		Slow:         duration > slowThreshold,
 		Success:      rw.StatusCode() == http.StatusOK,
